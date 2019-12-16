@@ -27,17 +27,20 @@ namespace StudentExercises.Controller
         }
 
         /*
-         * We're going to re-use the GET all method for Students because if a user wants to see *all* the students with a specific cohortId, it should still trigger the GET *all* method.
+         * We're going to re-use the GET all method for Students because if a user wants to see 
+           *all* the students with a specific cohortId, it should still trigger the GET *all* method.
          
          *[FromQuery]
             - Lets the GET method know that the parameter 'cohortId' is coming from a query string parameter in the URL
 
          *WHERE 1=1
             - Our first SQL statement needs to have a WHERE clause so we can add more SQL to the first statement
-            - The easiest thing to do to make sure that the WHERE clause is always true, is to say WHERE 1=1 (because 1 will always equal 1).
+            - The easiest thing to do to make sure that the WHERE clause is always true, 
+              is to say WHERE 1=1 (because 1 will always equal 1).
 
          *The Conditionals
-            - If the 'cohortId' from the query string parameter is NOT null, then add the AND SQL statement to our first SQL statement and create a SQL parameter for the cohortId.
+            - If the 'cohortId' from the query string parameter is NOT null, then add the AND SQL statement 
+              to our first SQL statement and create a SQL parameter for the cohortId.
                 - The next conditional is exactly the same, but for the 'lastName' query string parameter.
         */
         [HttpGet]
